@@ -1,0 +1,7 @@
+# SublimeText project files
+*.sublime-workspace
+
+*.log
+*.pot
+*.pyc
+local_settings.py
