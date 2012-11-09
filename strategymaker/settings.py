@@ -1,4 +1,7 @@
 # Django settings for strategymaker project.
+import os
+
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -60,10 +63,11 @@ STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static/'
+STATIC_URL = '/s/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
+    PROJECT_PATH + '/static/',
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -90,7 +94,7 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
@@ -103,6 +107,7 @@ ROOT_URLCONF = 'strategymaker.urls'
 WSGI_APPLICATION = 'strategymaker.wsgi.application'
 
 TEMPLATE_DIRS = (
+    PROJECT_PATH + '/tpl/',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -119,7 +124,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
-    'strategymaker.app',
+    'app',
 )
 
 # A sample logging configuration. The only tangible logging

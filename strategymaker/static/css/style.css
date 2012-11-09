@@ -1,0 +1,31 @@
+@media (min-width: 980px) {
+  body {
+    padding-top: 58px;
+  }
+}
+
+blockquote.quote {
+  margin-bottom: 30px;
+  border-color: #3bb3f2;
+}
+
+blockquote.quote:hover {
+  border-color: #000;
+}
+
+blockquote.quote:hover small a {
+  color: #3BB3F2;
+}
+
+blockquote small::before {
+  content: none;
+}
+
+footer {
+  text-align: center;
+}
+
+.label-info {
+  background-color: #3BB3F2;
+  font-size: 11px;
+}

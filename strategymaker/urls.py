@@ -6,7 +6,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'strategymaker.views.home', name='home'),
-    # url(r'^strategymaker/', include('strategymaker.foo.urls')),
+    url(r'^a/', include('app.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
